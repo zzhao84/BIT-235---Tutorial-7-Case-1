@@ -82,10 +82,21 @@
          <input name="email" id="mailBox" type="email" required />
          
          <label for="phoneBox">Phone Number*</label>
-         <input name="phoneNumber" id="phoneBox" type="tel" placeholder="(nnn) nnn-nnnn" required />
+         <input name="phoneNumber" id="phoneBox" type="tel" placeholder="(nnn) nnn-nnnn" required 
+            pattern="^\d{10}$|^(\(\d{3}\)\s*)?\d{3}[\s-]?\d{4}$" />
          
          <label for="idBox">ACGIP Membership Number</label>
-         <input name="acgipID" id="idBox" type="text" placeholder="acgip-nnnnnn" />
+         <input name="acgipID" id="idBox" type="text" placeholder="acgip-nnnnnn"
+            pattern="Aacgip\-\d{6}$" />
+            
+         <label for=regList">Registration Category</label>
+         <select name="registerType">
+            <option value="member">ACGIP Member ($695)</option>
+            <option value="nonmember">Non-Member ($795)</option>
+            <option value="student">Student ($310)</option>
+            <option value="poster">Poster ($95)</option>
+            <option value="guest">Guest ($35)</option>
+         </select>
       </form>
       
    </section>
